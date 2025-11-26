@@ -1,0 +1,24 @@
+let img = image_new("RGB", [400, 300], [255, 255, 255])
+print("Created new image:", image_size(img))
+
+let draw = image_draw(img)
+
+draw_rectangle(draw, [50, 50, 350, 250], null, [255, 0, 0], 3)
+print("Drew red rectangle")
+
+draw_circle(draw, [200, 150], 50, [0, 255, 0], [0, 0, 255], 2)
+print("Drew green circle with blue outline")
+
+draw_line(draw, [[50, 50], [350, 250]], [255, 165, 0], 2)
+draw_line(draw, [[350, 50], [50, 250]], [255, 165, 0], 2)
+print("Drew orange diagonal lines")
+
+draw_polygon(draw, [[100, 100], [300, 100], [200, 200]], [255, 255, 0], [0, 0, 0], 2)
+print("Drew yellow triangle")
+
+draw_text(draw, [120, 260], "Kyaro Image Test", [0, 0, 0])
+print("Drew text")
+
+image_save(img, "examples/test_drawing.png")
+print("Saved to examples/test_drawing.png")
+print("Image processing complete!")

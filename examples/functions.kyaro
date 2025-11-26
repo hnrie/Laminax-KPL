@@ -1,0 +1,38 @@
+func greet(name) {
+    return "Hello, " + name + "!"
+}
+
+func add(a, b) {
+    return a + b
+}
+
+func factorial(n) {
+    if n <= 1 {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+func fibonacci(n) {
+    if n <= 1 {
+        return n
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+print(greet("Kyaro"))
+print("5 + 3 =", add(5, 3))
+print("Factorial of 5:", factorial(5))
+print("Fibonacci of 10:", fibonacci(10))
+
+func power(base, exp) {
+    let result = 1
+    let i = 0
+    while i < exp {
+        result *= base
+        i += 1
+    }
+    return result
+}
+
+print("2^8 =", power(2, 8))

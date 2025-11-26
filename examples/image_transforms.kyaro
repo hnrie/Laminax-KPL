@@ -1,0 +1,59 @@
+print("Creating gradient image...")
+let img = image_new("RGB", [400, 300], [0, 0, 0])
+
+for y in range(300) {
+    for x in range(400) {
+        let r = int(x / 400.0 * 255)
+        let g = int(y / 300.0 * 255)
+        let b = 128
+        image_put_pixel(img, [x, y], [r, g, b])
+    }
+}
+
+image_save(img, "examples/transform_gradient.png")
+print("Saved gradient image")
+
+print("\nApplying transformations...")
+
+let rotated = image_rotate(img, 45, true, [255, 255, 255])
+image_save(rotated, "examples/transform_rotated.png")
+print("Rotated 45 degrees")
+
+let flipped_h = image_flip_horizontal(img)
+image_save(flipped_h, "examples/transform_flipped_h.png")
+print("Flipped horizontally")
+
+let flipped_v = image_flip_vertical(img)
+image_save(flipped_v, "examples/transform_flipped_v.png")
+print("Flipped vertically")
+
+let resized = image_resize(img, [200, 150])
+image_save(resized, "examples/transform_resized.png")
+print("Resized to 200x150")
+
+let cropped = image_crop(img, [50, 50, 350, 250])
+image_save(cropped, "examples/transform_cropped.png")
+print("Cropped region")
+
+let mirrored = image_mirror(img)
+image_save(mirrored, "examples/transform_mirrored.png")
+print("Mirrored")
+
+print("\nCreating composite images...")
+
+let img1 = image_new("RGB", [200, 200], [255, 0, 0])
+let img2 = image_new("RGB", [200, 200], [0, 0, 255])
+
+let blended = image_blend(img1, img2, 0.5)
+image_save(blended, "examples/composite_blend.png")
+print("Blended two images")
+
+let added = image_add(img1, img2, 0.5, 0)
+image_save(added, "examples/composite_add.png")
+print("Added two images")
+
+let multiplied = image_multiply(img1, img2)
+image_save(multiplied, "examples/composite_multiply.png")
+print("Multiplied two images")
+
+print("\nAll transformations complete!")

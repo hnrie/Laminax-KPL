@@ -1,0 +1,55 @@
+print("=== Linear Regression Example ===")
+let x_data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let y_data = [2.1, 4.3, 5.9, 8.2, 10.1, 12.3, 14.0, 16.1, 18.2, 20.0]
+
+print("X data:", x_data)
+print("Y data:", y_data)
+
+let regression = linear_regression(x_data, y_data)
+print("Slope:", regression[0])
+print("Intercept:", regression[1])
+
+print("\n=== Statistical Analysis ===")
+let dataset = [23, 45, 67, 12, 89, 34, 56, 78, 90, 11]
+print("Dataset:", dataset)
+print("Mean:", mean(dataset))
+print("Median:", median(dataset))
+print("Mode:", mode([1, 2, 2, 3, 3, 3, 4]))
+print("Standard Deviation:", stdev(dataset))
+print("Variance:", variance(dataset))
+print("Min:", min(dataset))
+print("Max:", max(dataset))
+
+print("\n=== Advanced List Operations ===")
+let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print("Original matrix:", matrix)
+print("Transposed matrix:", transpose(matrix))
+print("Flattened matrix:", flatten(matrix))
+
+print("\n=== Functional Programming ===")
+let numbers = [1, 2, 3, 4, 5]
+print("Original:", numbers)
+print("Sorted (desc):", sorted([5, 2, 8, 1, 9]))
+print("Product:", product(numbers))
+
+print("\n=== Probability Distributions ===")
+seed(12345)
+print("Normal distribution (mu=0, sigma=1):", gauss(0, 1))
+print("Normal distribution (mu=100, sigma=15):", normalvariate(100, 15))
+print("Exponential distribution (lambda=1.5):", expovariate(1.5))
+
+print("\n=== Special Math Functions ===")
+print("gamma(5) =", gamma(5))
+print("erf(1) =", erf(1))
+print("hypot(3, 4) =", hypot(3, 4))
+
+print("\n=== Data Science Utilities ===")
+let values = [10, 20, 30, 40, 50]
+print("Values:", values)
+print("Normalized:", normalize(values))
+print("Quantiles:", quantiles(values, 4))
+
+let x_vals = [1, 2, 3, 4, 5]
+let y_vals = [2, 4, 5, 4, 5]
+print("Covariance:", covariance(x_vals, y_vals))
+print("Correlation:", correlation(x_vals, y_vals))

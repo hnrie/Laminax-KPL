@@ -1,0 +1,46 @@
+print("While loop example:")
+let i = 0
+while i < 5 {
+    print("i =", i)
+    i += 1
+}
+
+print("\nFor loop with list:")
+for num in [10, 20, 30, 40, 50] {
+    print(num)
+}
+
+print("\nFor loop with range:")
+for x in range(5) {
+    print(x)
+}
+
+print("\nFor loop with string:")
+for char in "Kyaro" {
+    print(char)
+}
+
+print("\nNested loops:")
+for i in range(3) {
+    for j in range(3) {
+        print("i:", i, "j:", j)
+    }
+}
+
+print("\nBreak example:")
+let counter = 0
+while true {
+    print(counter)
+    counter += 1
+    if counter >= 5 {
+        break
+    }
+}
+
+print("\nContinue example:")
+for n in range(10) {
+    if n % 2 == 0 {
+        continue
+    }
+    print("Odd number:", n)
+}

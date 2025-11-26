@@ -1,0 +1,70 @@
+print("=== File Operations ===")
+
+fs_write_file("test_file.txt", "Hello from Kyaro!\n")
+print("Created test_file.txt")
+
+let content = fs_read_file("test_file.txt")
+print("File content:", content)
+
+fs_append_file("test_file.txt", "Appended line\n")
+print("Appended to file")
+
+let updated_content = fs_read_file("test_file.txt")
+print("Updated content:", updated_content)
+
+print("File exists:", fs_exists("test_file.txt"))
+print("Is file:", fs_is_file("test_file.txt"))
+print("File size:", fs_get_size("test_file.txt"), "bytes")
+
+print("\n=== Path Operations ===")
+let joined_path = path_join("folder", "subfolder", "file.txt")
+print("Joined path:", joined_path)
+
+let split_result = path_split(joined_path)
+print("Split path:", split_result)
+
+print("Dirname:", path_dirname(joined_path))
+print("Basename:", path_basename(joined_path))
+
+let ext_result = path_splitext("document.pdf")
+print("Split extension:", ext_result)
+
+print("Current directory:", fs_get_cwd())
+print("Home directory:", fs_get_home())
+print("Temp directory:", fs_get_temp())
+
+print("\n=== Directory Operations ===")
+
+fs_create_dir("test_folder", true)
+print("Created test_folder")
+
+fs_write_file("test_folder/file1.txt", "File 1")
+fs_write_file("test_folder/file2.txt", "File 2")
+fs_write_file("test_folder/file3.txt", "File 3")
+print("Created 3 files in test_folder")
+
+let dir_contents = fs_list_dir("test_folder")
+print("Directory contents:", dir_contents)
+
+print("\n=== File Manipulation ===")
+
+fs_copy_file("test_file.txt", "test_file_copy.txt")
+print("Copied test_file.txt to test_file_copy.txt")
+
+fs_rename("test_file_copy.txt", "test_file_renamed.txt")
+print("Renamed to test_file_renamed.txt")
+
+print("\n=== Cleanup ===")
+fs_delete_file("test_file.txt")
+fs_delete_file("test_file_renamed.txt")
+fs_delete_dir("test_folder", true)
+print("Cleaned up all test files and folders")
+
+print("\n=== Advanced Operations ===")
+print("Extension of 'file.py':", fs_get_extension("file.py"))
+print("Stem of 'document.pdf':", fs_get_stem("document.pdf"))
+
+let new_path = fs_with_suffix("file.txt", ".md")
+print("Changed suffix to .md:", new_path)
+
+print("\nFile system operations complete!")

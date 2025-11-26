@@ -1,0 +1,64 @@
+print("=== K-Means Clustering ===")
+let data = [[1, 2], [1.5, 1.8], [5, 8], [8, 8], [1, 0.6], [9, 11]]
+print("Data points:", data)
+
+let result = ml_kmeans(data, 2, 100, 42)
+let labels = result[0]
+let centroids = result[1]
+
+print("Cluster labels:", labels)
+print("Centroids:", centroids)
+
+print("\n=== K-Nearest Neighbors ===")
+let x_train = [[1, 1], [2, 2], [3, 3], [6, 6], [7, 7], [8, 8]]
+let y_train = [0, 0, 0, 1, 1, 1]
+
+let test_point = [5, 5]
+let prediction = ml_knn_predict(x_train, y_train, test_point, 3)
+print("Test point:", test_point)
+print("Predicted class:", prediction)
+
+print("\n=== Data Preprocessing ===")
+let raw_data = [10, 20, 30, 40, 50]
+print("Original data:", raw_data)
+
+let standardized = ml_standardize(raw_data)
+print("Standardized:", standardized)
+
+let scaled = ml_min_max_scale(raw_data, [0, 1])
+print("Min-Max scaled:", scaled)
+
+let categories = ["cat", "dog", "cat", "bird", "dog"]
+let encoded = ml_one_hot_encode(categories)
+print("One-hot encoded:", encoded)
+
+print("\n=== Distance Metrics ===")
+let vec1 = [1, 2, 3]
+let vec2 = [4, 5, 6]
+print("Vector 1:", vec1)
+print("Vector 2:", vec2)
+print("Euclidean distance:", ml_euclidean_distance(vec1, vec2))
+print("Manhattan distance:", ml_manhattan_distance(vec1, vec2))
+print("Cosine similarity:", ml_cosine_similarity(vec1, vec2))
+
+print("\n=== Model Evaluation ===")
+let y_true = [1, 0, 1, 1, 0, 1, 0, 0, 1, 1]
+let y_pred = [1, 0, 1, 0, 0, 1, 1, 0, 1, 1]
+
+print("True labels:", y_true)
+print("Predictions:", y_pred)
+print("Accuracy:", ml_accuracy(y_true, y_pred))
+print("Precision:", ml_precision(y_true, y_pred, 1))
+print("Recall:", ml_recall(y_true, y_pred, 1))
+print("F1 Score:", ml_f1_score(y_true, y_pred, 1))
+print("Confusion Matrix:", ml_confusion_matrix(y_true, y_pred))
+
+print("\n=== Regression Metrics ===")
+let y_true_reg = [3, -0.5, 2, 7]
+let y_pred_reg = [2.5, 0.0, 2, 8]
+print("True values:", y_true_reg)
+print("Predicted values:", y_pred_reg)
+print("MSE:", ml_mse(y_true_reg, y_pred_reg))
+print("MAE:", ml_mae(y_true_reg, y_pred_reg))
+print("RMSE:", ml_rmse(y_true_reg, y_pred_reg))
+print("R² Score:", ml_r2_score(y_true_reg, y_pred_reg))

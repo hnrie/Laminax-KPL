@@ -1,0 +1,59 @@
+print("Creating sample image...")
+let original = image_new("RGB", [400, 300], [100, 150, 200])
+
+let draw = image_draw(original)
+draw_circle(draw, [200, 150], 80, [255, 255, 0])
+draw_rectangle(draw, [100, 80, 300, 220], null, [255, 0, 0], 3)
+
+image_save(original, "examples/filters_original.png")
+print("Saved original image")
+
+print("\nApplying filters...")
+
+let blurred = image_blur(original, 5)
+image_save(blurred, "examples/filters_blurred.png")
+print("Applied blur filter")
+
+let sharpened = image_sharpen(original)
+image_save(sharpened, "examples/filters_sharpened.png")
+print("Applied sharpen filter")
+
+let edges = image_find_edges(original)
+image_save(edges, "examples/filters_edges.png")
+print("Applied edge detection")
+
+let embossed = image_emboss(original)
+image_save(embossed, "examples/filters_embossed.png")
+print("Applied emboss filter")
+
+let contoured = image_contour(original)
+image_save(contoured, "examples/filters_contour.png")
+print("Applied contour filter")
+
+print("\nApplying enhancements...")
+
+let brightened = image_brightness(original, 1.5)
+image_save(brightened, "examples/enhance_bright.png")
+print("Increased brightness")
+
+let high_contrast = image_contrast(original, 2.0)
+image_save(high_contrast, "examples/enhance_contrast.png")
+print("Increased contrast")
+
+let grayscale = image_grayscale(original)
+image_save(grayscale, "examples/enhance_grayscale.png")
+print("Converted to grayscale")
+
+let inverted = image_invert(original)
+image_save(inverted, "examples/enhance_inverted.png")
+print("Inverted colors")
+
+let posterized = image_posterize(original, 4)
+image_save(posterized, "examples/enhance_posterized.png")
+print("Applied posterize effect")
+
+let solarized = image_solarize(original, 128)
+image_save(solarized, "examples/enhance_solarized.png")
+print("Applied solarize effect")
+
+print("\nAll filters and enhancements applied successfully!")

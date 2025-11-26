@@ -1,0 +1,85 @@
+print("=== Neural Network Activation Functions ===")
+let x_values = [-2, -1, 0, 1, 2]
+print("Input values:", x_values)
+
+print("\nSigmoid:")
+for x in x_values {
+    print("  sigmoid(" + str(x) + ") =", sigmoid(x))
+}
+
+print("\nReLU:")
+for x in x_values {
+    print("  relu(" + str(x) + ") =", relu(x))
+}
+
+print("\nTanh:")
+for x in x_values {
+    print("  tanh(" + str(x) + ") =", nn_tanh(x))
+}
+
+print("\nLeaky ReLU:")
+for x in x_values {
+    print("  leaky_relu(" + str(x) + ") =", nn_leaky_relu(x, 0.01))
+}
+
+print("\nELU:")
+for x in x_values {
+    print("  elu(" + str(x) + ") =", nn_elu(x, 1.0))
+}
+
+print("\n=== Loss Functions ===")
+let y_true_binary = [1, 0, 1, 1, 0]
+let y_pred_binary = [0.9, 0.1, 0.8, 0.7, 0.2]
+print("True labels:", y_true_binary)
+print("Predictions:", y_pred_binary)
+print("Binary Cross-Entropy:", nn_binary_crossentropy(y_true_binary, y_pred_binary))
+
+let y_true_reg = [1.0, 2.0, 3.0, 4.0]
+let y_pred_reg = [1.1, 2.2, 2.9, 4.1]
+print("\nTrue values:", y_true_reg)
+print("Predictions:", y_pred_reg)
+print("MSE Loss:", nn_mse_loss(y_true_reg, y_pred_reg))
+
+print("\n=== Softmax ===")
+let logits = [2.0, 1.0, 0.1]
+let probs = softmax(logits)
+print("Logits:", logits)
+print("Probabilities:", probs)
+print("Sum of probabilities:", sum(probs))
+
+print("\n=== Batch Normalization ===")
+let batch = [1, 2, 3, 4, 5]
+print("Original batch:", batch)
+let normalized = nn_batch_norm(batch)
+print("Normalized batch:", normalized)
+
+print("\n=== Matrix Operations ===")
+let matrix_a = [[1, 2], [3, 4]]
+let matrix_b = [[5, 6], [7, 8]]
+
+print("Matrix A:", matrix_a)
+print("Matrix B:", matrix_b)
+
+let product = matrix_multiply(matrix_a, matrix_b)
+print("A × B:", product)
+
+let sum_matrix = matrix_add(matrix_a, matrix_b)
+print("A + B:", sum_matrix)
+
+let transposed = matrix_transpose(matrix_a)
+print("A transposed:", transposed)
+
+let identity = matrix_identity(3)
+print("3×3 Identity:", identity)
+
+let det = matrix_determinant(matrix_a)
+print("Determinant of A:", det)
+
+print("\n=== Gradient Descent ===")
+let weights = [1.0, 2.0, 3.0]
+let gradients = [0.1, 0.2, 0.15]
+print("Weights:", weights)
+print("Gradients:", gradients)
+
+let new_weights = gradient_descent_step(weights, gradients, 0.1)
+print("Updated weights:", new_weights)

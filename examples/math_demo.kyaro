@@ -1,0 +1,62 @@
+print("=== Basic Math ===")
+print("sqrt(16) =", sqrt(16))
+print("pow(2, 10) =", pow(2, 10))
+print("abs(-42) =", abs(-42))
+print("factorial(5) =", factorial(5))
+print("gcd(48, 18) =", gcd(48, 18))
+print("lcm(12, 18) =", lcm(12, 18))
+
+print("\n=== Trigonometry ===")
+print("sin(pi() / 2) =", sin(pi() / 2))
+print("cos(0) =", cos(0))
+print("tan(pi() / 4) =", tan(pi() / 4))
+print("degrees(pi()) =", degrees(pi()))
+print("radians(180) =", radians(180))
+
+print("\n=== Logarithms ===")
+print("log(100, 10) =", log(100, 10))
+print("log10(1000) =", log10(1000))
+print("log2(8) =", log2(8))
+print("ln(e()) =", ln(e()))
+print("exp(1) =", exp(1))
+
+print("\n=== Statistics ===")
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("Data:", data)
+print("mean =", mean(data))
+print("median =", median(data))
+print("stdev =", stdev(data))
+print("variance =", variance(data))
+print("sum =", sum(data))
+
+print("\n=== Data Manipulation ===")
+print("cumsum([1, 2, 3, 4, 5]) =", cumsum([1, 2, 3, 4, 5]))
+print("cumprod([1, 2, 3, 4, 5]) =", cumprod([1, 2, 3, 4, 5]))
+print("diff([10, 15, 18, 25]) =", diff([10, 15, 18, 25]))
+print("unique([1, 2, 2, 3, 3, 3, 4]) =", unique([1, 2, 2, 3, 3, 3, 4]))
+
+print("\n=== Vector Operations ===")
+let vec_a = [1, 2, 3]
+let vec_b = [4, 5, 6]
+print("vec_a:", vec_a)
+print("vec_b:", vec_b)
+print("dot(vec_a, vec_b) =", dot(vec_a, vec_b))
+print("norm(vec_a) =", norm(vec_a))
+
+print("\n=== Random Numbers ===")
+seed(42)
+print("random() =", random())
+print("randint(1, 10) =", randint(1, 10))
+print("uniform(0, 1) =", uniform(0, 1))
+print("choice([10, 20, 30, 40, 50]) =", choice([10, 20, 30, 40, 50]))
+
+print("\n=== Machine Learning Functions ===")
+print("sigmoid(0) =", sigmoid(0))
+print("relu(-5) =", relu(-5))
+print("relu(5) =", relu(5))
+print("softmax([1, 2, 3]) =", softmax([1, 2, 3]))
+
+print("\n=== Constants ===")
+print("pi() =", pi())
+print("e() =", e())
+print("tau() =", tau())
