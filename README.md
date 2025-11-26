@@ -1,6 +1,6 @@
 # Laminax Kyaro Programming Language (KPL)
 
-**By [Laminax](https://laminax.org)**
+**[Laminax](https://laminax.org)**
 
 A dynamically-typed, interpreted programming language written in pure Python with clean, readable syntax.
 
@@ -19,7 +19,7 @@ A dynamically-typed, interpreted programming language written in pure Python wit
 No installation required! Just Python 3.6+ is needed.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/hnrie/Laminax-KPL
 cd Laminax-KPL
 python main.py
 ```
@@ -132,7 +132,6 @@ print(len(numbers))
 - **Constants**: `pi()`, `e()`, `tau()`, `inf()`, `nan()`
 - **Utility**: `exit()`, `time()`, `sleep()`
 
-See [FUNCTIONS.md](FUNCTIONS.md) for complete reference.
 
 ### Image Processing Functions
 
@@ -148,7 +147,6 @@ See [FUNCTIONS.md](FUNCTIONS.md) for complete reference.
 - **Pixel ops**: `image_get_pixel()`, `image_put_pixel()`
 - **Channels**: `image_split()`, `image_merge()`, `image_convert()`
 
-See [IMAGE_FUNCTIONS.md](IMAGE_FUNCTIONS.md) for complete reference.
 
 ### AI and Machine Learning Functions
 
@@ -165,7 +163,6 @@ See [IMAGE_FUNCTIONS.md](IMAGE_FUNCTIONS.md) for complete reference.
 - **Matrix operations**: `matrix_multiply()`, `matrix_transpose()`, `matrix_add()`, `matrix_subtract()`, `matrix_identity()`, `matrix_determinant()`
 - **Optimization**: `gradient_descent_step()`, `adam_step()`
 
-See [AI_ML_FUNCTIONS.md](AI_ML_FUNCTIONS.md) for complete reference.
 
 ### File System Functions
 
@@ -180,7 +177,6 @@ See [AI_ML_FUNCTIONS.md](AI_ML_FUNCTIONS.md) for complete reference.
 - **Working directory**: `fs_get_cwd()`, `fs_change_dir()`, `fs_get_home()`, `fs_get_temp()`
 - **Advanced**: `fs_symlink()`, `fs_readlink()`, `fs_chmod()`, `fs_get_extension()`, `fs_get_stem()`, `fs_with_suffix()`
 
-See [FILESYSTEM_FUNCTIONS.md](FILESYSTEM_FUNCTIONS.md) for complete reference.
 
 ## Example Programs
 
@@ -234,27 +230,7 @@ for i in range(1, 101) {
 }
 ```
 
-## Project Structure
-
-```
-Laminax-KPL/
-├── main.py           # Entry point and REPL
-├── lexer.py          # Tokenizer
-├── parser.py         # Parser (builds AST)
-├── interpreter.py    # Interpreter (executes AST)
-├── ast_nodes.py      # AST node definitions
-├── environment.py    # Variable scoping
-├── builtins.py       # Standard library
-├── token_types.py    # Token type definitions
-├── errors.py         # Error handling
-├── examples/         # Example programs
-└── README.md         # This file
-```
 
 ## License
 
-Created by Laminax - https://laminax.org
-
-## About Laminax
-
-Laminax is committed to building high-quality, stable, and performant software solutions. The Kyaro Programming Language represents our dedication to creating accessible and powerful development tools.
+[LAMINAX CO](https://laminax.org)
