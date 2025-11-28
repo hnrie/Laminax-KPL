@@ -2,7 +2,16 @@
 
 **[Laminax](https://laminax.org)**
 
-A dynamically-typed, interpreted programming language written in pure Python with clean, readable syntax.
+A dynamically-typed, interpreted programming language with implementations in both Python and Rust.
+
+## 🚀 Dual Implementation
+
+This repository contains **two complete implementations** of the Laminax-KPL interpreter:
+
+- **🐍 Python Implementation** (`src/python/`): Original version with extensive built-in functions and AI/ML capabilities
+- **🦀 Rust Implementation** (`src/rust/`): High-performance version with memory safety and type safety guarantees
+
+Both implementations are **100% compatible** for core language features and produce identical outputs. See [VERIFICATION.md](VERIFICATION.md) for detailed compatibility testing results.
 
 ## Features
 
@@ -14,9 +23,43 @@ A dynamically-typed, interpreted programming language written in pure Python wit
 - **String operations** - String manipulation and formatting
 - **REPL** - Interactive shell for testing code
 
+## Quick Start
+
+### Python Version
+```bash
+# Clone the repository
+git clone <repository-url>
+cd Laminax-KPL
+
+# Run Python interpreter (requires Python 3.6+)
+cd src/python
+python main.py                    # REPL mode
+python main.py program.kyaro      # Run file
+```
+
+### Rust Version
+```bash
+# Install Rust (if not already installed)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Build and run Rust interpreter
+cd src/rust
+cargo run                         # REPL mode
+cargo run program.kyaro           # Run file
+cargo build --release            # Build optimized binary
+```
+
+### Performance Comparison
+- **Python**: Instant startup, interpreted execution, extensive libraries
+- **Rust**: Fast compilation (~30s first time), compiled execution (5-10x faster), memory safe
+
 ## Installation
 
+### Python Version
 No installation required! Just Python 3.6+ is needed.
+
+### Rust Version
+Requires Rust toolchain (automatically installs dependencies via Cargo).
 
 ```bash
 git clone https://github.com/hnrie/Laminax-KPL

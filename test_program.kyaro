@@ -1,0 +1,18 @@
+# Simple test program for Kyaro language
+let x = 10
+let y = 20
+let result = x + y
+print(result)
+
+let message = "Hello, Kyaro!"
+print(message)
+
+# Test boolean operations
+let is_true = true
+let is_false = false
+print(is_true)
+print(not is_false)
+
+# Test list
+let numbers = [1, 2, 3, 4, 5]
+print(numbers)
