@@ -23,15 +23,40 @@ clap = { version = "4.0", features = ["derive"] }
 # For regex support (if needed for advanced string operations)
 regex = "1.0"
 
+# For random number generation (equivalent to Python random)
+rand = "0.8"
+rand_distr = "0.4"
+
+# For mathematical functions (equivalent to Python math)
+libm = "0.2"
+
+# For statistical functions (equivalent to Python statistics)
+statrs = "0.16"
+
 # For image processing (equivalent to Python PIL/Pillow)
 image = "0.24"
+imageproc = "0.23"
 
-# For HTTP requests (equivalent to Python requests)
-reqwest = { version = "0.11", features = ["json"] }
-tokio = { version = "1.0", features = ["full"] }
-
-# For AI/ML functionality (basic linear algebra)
+# For AI/ML functionality (linear algebra and neural networks)
 ndarray = "0.15"
+ndarray-linalg = "0.16"
+nalgebra = "0.32"
+
+# For file system operations
+walkdir = "2.0"
+glob = "0.3"
+tempfile = "3.0"
+
+# For async operations
+tokio = { version = "1.0", features = ["full"] }
+futures = "0.3"
+
+# For time operations
+chrono = "0.4"
+
+# For additional math functions
+num-traits = "0.2"
+num-complex = "0.4"
 
 [dev-dependencies]
 # For testing
