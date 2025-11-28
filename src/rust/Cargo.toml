@@ -1,0 +1,46 @@
+[package]
+name = "laminax-kpl"
+version = "1.0.0"
+edition = "2021"
+authors = ["Laminax <https://laminax.org>"]
+description = "A Small, Fast and Extensible Programming Language - Rust Implementation"
+
+[dependencies]
+# For error handling and result types
+anyhow = "1.0"
+thiserror = "1.0"
+
+# For collections and data structures
+indexmap = "2.0"
+
+# For file I/O and path handling
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# For command line interface
+clap = { version = "4.0", features = ["derive"] }
+
+# For regex support (if needed for advanced string operations)
+regex = "1.0"
+
+# For image processing (equivalent to Python PIL/Pillow)
+image = "0.24"
+
+# For HTTP requests (equivalent to Python requests)
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.0", features = ["full"] }
+
+# For AI/ML functionality (basic linear algebra)
+ndarray = "0.15"
+
+[dev-dependencies]
+# For testing
+criterion = "0.5"
+
+[[bin]]
+name = "kyaro"
+path = "src/main.rs"
+
+[lib]
+name = "laminax_kpl"
+path = "src/lib.rs"
