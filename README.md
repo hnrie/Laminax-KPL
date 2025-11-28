@@ -28,7 +28,7 @@ Both implementations are **100% compatible** for core language features and prod
 ### Python Version
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/hnrie/Laminax-KPL
 cd Laminax-KPL
 
 # Run Python interpreter (requires Python 3.6+)
