@@ -1,27 +1,25 @@
-# Laminax Kyaro Programming Language (KPL)
+# Laminax Kyaro Programming Language
 
-**[Laminax](https://laminax.org)**
+A dynamically-typed, interpreted programming language with dual implementations in Python and Rust.
 
-A dynamically-typed, interpreted programming language with implementations in both Python and Rust.
+## Implementation Overview
 
-## 🚀 Dual Implementation
+This repository contains two complete implementations of the Laminax-KPL interpreter:
 
-This repository contains **two complete implementations** of the Laminax-KPL interpreter:
+- Python Implementation (src/python/): Original version with extensive built-in functions and AI/ML capabilities
+- Rust Implementation (src/rust/): High-performance version with memory safety and type safety guarantees
 
-- **🐍 Python Implementation** (`src/python/`): Original version with extensive built-in functions and AI/ML capabilities
-- **🦀 Rust Implementation** (`src/rust/`): High-performance version with memory safety and type safety guarantees
-
-Both implementations are **100% compatible** for core language features and produce identical outputs. See [VERIFICATION.md](VERIFICATION.md) for detailed compatibility testing results.
+Both implementations provide compatible core language features.
 
 ## Features
 
-- **Dynamic typing** - Variables don't need type declarations
-- **First-class functions** - Functions are values that can be passed around
-- **Control flow** - if/elif/else, while loops, for loops
-- **Built-in functions** - Rich standard library for common operations
-- **Lists** - Dynamic arrays with indexing and iteration
-- **String operations** - String manipulation and formatting
-- **REPL** - Interactive shell for testing code
+- Dynamic typing
+- First-class functions
+- Control flow structures (if/elif/else, while loops, for loops)
+- Comprehensive built-in function library
+- Dynamic arrays with indexing and iteration
+- String manipulation and formatting
+- Interactive REPL shell
 
 ## Quick Start
 
@@ -50,8 +48,8 @@ cargo build --release            # Build optimized binary
 ```
 
 ### Performance Comparison
-- **Python**: Instant startup, interpreted execution, extensive libraries
-- **Rust**: Fast compilation (~30s first time), compiled execution (5-10x faster), memory safe
+- Python: Instant startup, interpreted execution, extensive libraries
+- Rust: Fast compilation, compiled execution (5-10x faster), memory safe
 
 ## Installation
 
@@ -148,77 +146,72 @@ print(len(numbers))
 
 ### Operators
 
-**Arithmetic:** `+`, `-`, `*`, `/`, `%`, `**` (power)
-
-**Comparison:** `==`, `!=`, `<`, `>`, `<=`, `>=`
-
-**Logical:** `and`, `or`, `not`
-
-**Assignment:** `=`, `+=`, `-=`, `*=`, `/=`
+Arithmetic: +, -, *, /, %, ** (power)
+Comparison: ==, !=, <, >, <=, >=
+Logical: and, or, not
+Assignment: =, +=, -=, *=, /=
 
 ### Built-in Functions
 
-**136 built-in functions** across multiple categories:
+136 built-in functions across multiple categories:
 
-- **I/O**: `print()`, `input()`
-- **Type conversion**: `str()`, `int()`, `float()`, `type()`
-- **Collections**: `len()`, `range()`, `append()`, `pop()`, `push()`, `reverse()`, `sort()`, `sorted()`, `count()`, `index()`, `insert()`, `remove()`, `clear()`, `copy()`, `extend()`, `unique()`, `flatten()`
-- **Basic math**: `abs()`, `min()`, `max()`, `sum()`, `sqrt()`, `pow()`, `exp()`, `floor()`, `ceil()`, `round()`, `trunc()`, `factorial()`, `gcd()`, `lcm()`
-- **Logarithms**: `log()`, `log10()`, `log2()`, `ln()`
-- **Trigonometry**: `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`, `sinh()`, `cosh()`, `tanh()`, `asinh()`, `acosh()`, `atanh()`, `degrees()`, `radians()`, `hypot()`
-- **Special functions**: `isnan()`, `isinf()`, `isfinite()`, `copysign()`, `fmod()`, `remainder()`, `modf()`, `frexp()`, `ldexp()`, `erf()`, `erfc()`, `gamma()`, `lgamma()`
-- **Statistics**: `mean()`, `median()`, `median_low()`, `median_high()`, `mode()`, `stdev()`, `variance()`, `pstdev()`, `pvariance()`, `quantiles()`, `covariance()`, `correlation()`, `linear_regression()`, `harmonic_mean()`, `geometric_mean()`, `fmean()`
-- **Random**: `random()`, `randint()`, `uniform()`, `choice()`, `shuffle()`, `sample()`, `gauss()`, `normalvariate()`, `lognormvariate()`, `expovariate()`, `vonmisesvariate()`, `gammavariate()`, `betavariate()`, `paretovariate()`, `weibullvariate()`, `seed()`
-- **Functional**: `zip()`, `enumerate()`, `filter()`, `map()`, `reduce()`, `all()`, `any()`
-- **Data analysis**: `product()`, `cumsum()`, `cumprod()`, `diff()`, `transpose()`, `dot()`, `norm()`, `normalize()`
-- **Machine learning**: `sigmoid()`, `relu()`, `softmax()`, `clamp()`, `lerp()`
-- **Constants**: `pi()`, `e()`, `tau()`, `inf()`, `nan()`
-- **Utility**: `exit()`, `time()`, `sleep()`
+- I/O: print(), input()
+- Type conversion: str(), int(), float(), type()
+- Collections: len(), range(), append(), pop(), push(), reverse(), sort(), sorted(), count(), index(), insert(), remove(), clear(), copy(), extend(), unique(), flatten()
+- Basic math: abs(), min(), max(), sum(), sqrt(), pow(), exp(), floor(), ceil(), round(), trunc(), factorial(), gcd(), lcm()
+- Logarithms: log(), log10(), log2(), ln()
+- Trigonometry: sin(), cos(), tan(), asin(), acos(), atan(), atan2(), sinh(), cosh(), tanh(), asinh(), acosh(), atanh(), degrees(), radians(), hypot()
+- Special functions: isnan(), isinf(), isfinite(), copysign(), fmod(), remainder(), modf(), frexp(), ldexp(), erf(), erfc(), gamma(), lgamma()
+- Statistics: mean(), median(), median_low(), median_high(), mode(), stdev(), variance(), pstdev(), pvariance(), quantiles(), covariance(), correlation(), linear_regression(), harmonic_mean(), geometric_mean(), fmean()
+- Random: random(), randint(), uniform(), choice(), shuffle(), sample(), gauss(), normalvariate(), lognormvariate(), expovariate(), vonmisesvariate(), gammavariate(), betavariate(), paretovariate(), weibullvariate(), seed()
+- Functional: zip(), enumerate(), filter(), map(), reduce(), all(), any()
+- Data analysis: product(), cumsum(), cumprod(), diff(), transpose(), dot(), norm(), normalize()
+- Machine learning: sigmoid(), relu(), softmax(), clamp(), lerp()
+- Constants: pi(), e(), tau(), inf(), nan()
+- Utility: exit(), time(), sleep()
 
 
 ### Image Processing Functions
 
-**70 image manipulation functions** powered by Pillow:
+70 image manipulation functions:
 
-- **I/O**: `image_load()`, `image_save()`, `image_new()`
-- **Transformations**: `image_resize()`, `image_crop()`, `image_rotate()`, `image_flip_horizontal()`, `image_flip_vertical()`
-- **Filters**: `image_blur()`, `image_sharpen()`, `image_edge_enhance()`, `image_find_edges()`, `image_emboss()`, `image_contour()`
-- **Enhancements**: `image_brightness()`, `image_contrast()`, `image_color()`, `image_sharpness()`
-- **Effects**: `image_grayscale()`, `image_invert()`, `image_posterize()`, `image_solarize()`, `image_equalize()`
-- **Composition**: `image_blend()`, `image_add()`, `image_subtract()`, `image_multiply()`, `image_composite()`
-- **Drawing**: `image_draw()`, `draw_line()`, `draw_rectangle()`, `draw_circle()`, `draw_ellipse()`, `draw_polygon()`, `draw_text()`
-- **Pixel ops**: `image_get_pixel()`, `image_put_pixel()`
-- **Channels**: `image_split()`, `image_merge()`, `image_convert()`
-
+- I/O: image_load(), image_save(), image_new()
+- Transformations: image_resize(), image_crop(), image_rotate(), image_flip_horizontal(), image_flip_vertical()
+- Filters: image_blur(), image_sharpen(), image_edge_enhance(), image_find_edges(), image_emboss(), image_contour()
+- Enhancements: image_brightness(), image_contrast(), image_color(), image_sharpness()
+- Effects: image_grayscale(), image_invert(), image_posterize(), image_solarize(), image_equalize()
+- Composition: image_blend(), image_add(), image_subtract(), image_multiply(), image_composite()
+- Drawing: image_draw(), draw_line(), draw_rectangle(), draw_circle(), draw_ellipse(), draw_polygon(), draw_text()
+- Pixel operations: image_get_pixel(), image_put_pixel()
+- Channels: image_split(), image_merge(), image_convert()
 
 ### AI and Machine Learning Functions
 
-**37 AI/ML functions** for data science and neural networks:
+37 AI/ML functions for data science and neural networks:
 
-- **Data preprocessing**: `ml_train_test_split()`, `ml_standardize()`, `ml_min_max_scale()`, `ml_one_hot_encode()`
-- **Algorithms**: `ml_knn_predict()`, `ml_kmeans()`
-- **Distance metrics**: `ml_euclidean_distance()`, `ml_manhattan_distance()`, `ml_cosine_similarity()`
-- **Regression metrics**: `ml_mse()`, `ml_mae()`, `ml_rmse()`, `ml_r2_score()`
-- **Classification metrics**: `ml_accuracy()`, `ml_precision()`, `ml_recall()`, `ml_f1_score()`, `ml_confusion_matrix()`
-- **Neural network activations**: `nn_tanh()`, `nn_leaky_relu()`, `nn_elu()`, `nn_softplus()`
-- **Loss functions**: `nn_mse_loss()`, `nn_binary_crossentropy()`, `nn_categorical_crossentropy()`
-- **NN utilities**: `nn_dropout()`, `nn_batch_norm()`
-- **Matrix operations**: `matrix_multiply()`, `matrix_transpose()`, `matrix_add()`, `matrix_subtract()`, `matrix_identity()`, `matrix_determinant()`
-- **Optimization**: `gradient_descent_step()`, `adam_step()`
-
+- Data preprocessing: ml_train_test_split(), ml_standardize(), ml_min_max_scale(), ml_one_hot_encode()
+- Algorithms: ml_knn_predict(), ml_kmeans()
+- Distance metrics: ml_euclidean_distance(), ml_manhattan_distance(), ml_cosine_similarity()
+- Regression metrics: ml_mse(), ml_mae(), ml_rmse(), ml_r2_score()
+- Classification metrics: ml_accuracy(), ml_precision(), ml_recall(), ml_f1_score(), ml_confusion_matrix()
+- Neural network activations: nn_tanh(), nn_leaky_relu(), nn_elu(), nn_softplus()
+- Loss functions: nn_mse_loss(), nn_binary_crossentropy(), nn_categorical_crossentropy()
+- NN utilities: nn_dropout(), nn_batch_norm()
+- Matrix operations: matrix_multiply(), matrix_transpose(), matrix_add(), matrix_subtract(), matrix_identity(), matrix_determinant()
+- Optimization: gradient_descent_step(), adam_step()
 
 ### File System Functions
 
-**52 file system functions** for comprehensive file and directory operations:
+52 file system functions for comprehensive file and directory operations:
 
-- **File I/O**: `fs_read_file()`, `fs_write_file()`, `fs_read_lines()`, `fs_write_lines()`, `fs_read_bytes()`, `fs_write_bytes()`, `fs_append_file()`
-- **File/Dir checks**: `fs_exists()`, `fs_is_file()`, `fs_is_dir()`, `fs_is_link()`
-- **File/Dir operations**: `fs_delete_file()`, `fs_delete_dir()`, `fs_create_dir()`, `fs_copy_file()`, `fs_copy_dir()`, `fs_move()`, `fs_rename()`, `fs_touch()`
-- **Directory listing**: `fs_list_dir()`, `fs_walk()`, `fs_glob()`, `fs_find_files()`
-- **File metadata**: `fs_get_size()`, `fs_get_mtime()`, `fs_get_ctime()`, `fs_get_atime()`, `fs_stat()`
-- **Path manipulation**: `path_join()`, `path_split()`, `path_dirname()`, `path_basename()`, `path_splitext()`, `path_abspath()`, `path_realpath()`, `path_normpath()`
-- **Working directory**: `fs_get_cwd()`, `fs_change_dir()`, `fs_get_home()`, `fs_get_temp()`
-- **Advanced**: `fs_symlink()`, `fs_readlink()`, `fs_chmod()`, `fs_get_extension()`, `fs_get_stem()`, `fs_with_suffix()`
+- File I/O: fs_read_file(), fs_write_file(), fs_read_lines(), fs_write_lines(), fs_read_bytes(), fs_write_bytes(), fs_append_file()
+- File/Dir checks: fs_exists(), fs_is_file(), fs_is_dir(), fs_is_link()
+- File/Dir operations: fs_delete_file(), fs_delete_dir(), fs_create_dir(), fs_copy_file(), fs_copy_dir(), fs_move(), fs_rename(), fs_touch()
+- Directory listing: fs_list_dir(), fs_walk(), fs_glob(), fs_find_files()
+- File metadata: fs_get_size(), fs_get_mtime(), fs_get_ctime(), fs_get_atime(), fs_stat()
+- Path manipulation: path_join(), path_split(), path_dirname(), path_basename(), path_splitext(), path_abspath(), path_realpath(), path_normpath()
+- Working directory: fs_get_cwd(), fs_change_dir(), fs_get_home(), fs_get_temp()
+- Advanced: fs_symlink(), fs_readlink(), fs_chmod(), fs_get_extension(), fs_get_stem(), fs_with_suffix()
 
 
 ## Example Programs

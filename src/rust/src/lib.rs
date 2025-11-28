@@ -5,6 +5,8 @@ pub mod ast_nodes;
 pub mod parser;
 pub mod interpreter;
 pub mod environment;
+pub mod builtins;
+pub mod ai_ml_functions;
 
 pub use errors::{KyaroError, Result};
 pub use token_types::{Token, TokenType, TokenValue};
